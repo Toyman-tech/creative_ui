@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(65, 5, 231);
+}
+
+.points{
+   display: flex;
+   font: 1.5em sans-serif;
+   
+}
+.sops{
+    color: #033538ee;
+}
+.points .fixed1{
+    position: absolute;
+    color: white;
+    top: 7%;
+    right: 25%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.dot1{
+    background-color: #39c0c7;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    z-index: 100;
+}
+.point1{
+    background-color: aliceblue;
+    color: black;
+    height: 90px;
+    width: 200px;
+    padding: 20px;
+    z-index: 20;
+    border-radius: 10px;
+    font-weight: 500;
+    margin-top: -7px;
+    font-size: 1.7rem;
+}
+.points .fixed2{
+    position: absolute;
+    color: white;
+    top: 63%;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.dot2{
+    background-color: #39c0c7;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    z-index: 100;
+}
+.point2{
+    background-color: aliceblue;
+    color: black;
+    height: 90px;
+    width: 200px;
+    padding: 20px;
+    z-index: 20;
+    border-radius: 10px;
+    font-weight: 500;
+    margin-top: -7px;
+    font-size: 1.7rem;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+    height: 1100px;
+    border-radius: 50%;
+    overflow: visible;
+}
+.container .icon{
+    position: relative;
+    margin-top: 200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-image: url(img.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: cover;
+}
+.container .icon .test {
+    margin-top: -27rem;
+}
+.container .icon .test .imgBx{
+    position: absolute;
+    left: 7%;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 3px solid rgba(250, 244, 244, 0.87) ;
+    transform: rotate(calc(360deg/2 * var(--i)));
+    transform-origin: 410px;
+    animation: animate_01 70s linear infinite;
+    
+}
+.container .icon .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/2 * var(--i)));
+    animation: animate_02 70s linear infinite;
+    transition: 0.5s;
+    fill: black;
+}
+.container .icon .imgBx:hover{
+  box-shadow: 0 0 0 6px rgba(206, 188, 188, 0.295), 0 0 0 12px #39c0c7
+}
+
+
+@keyframes animate_01{
+    0%{
+        rotate:0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+@keyframes animate_02{
+    0%{
+        rotate:0deg;
+    }
+    100%{
+        rotate:-360deg;
+    }
+}
